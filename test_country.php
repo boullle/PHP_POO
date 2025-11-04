@@ -14,7 +14,7 @@ echo "<br>".$Belgique->getContinent();
 $France->setCapital("Toulouse");
 echo $France->getInfo();
 
-echo "mon tableau";
+echo "mon tableau :";
 $countries = [$France,$Algerie,$Belgique];
 foreach ($countries as $country) {
     echo $country->getInfo();
