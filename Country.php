@@ -52,6 +52,9 @@ Class Country {
         if ($this->getPopulation() > 100000000){
             return true;
         }
+        else{
+            return false;
+        }
     }
 }
 Class DeveloppedCountry extends Country{
