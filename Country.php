@@ -18,6 +18,9 @@ Class Country {
     public function getName(){
         return $this->name;
     }
+    public function setName($name){
+        $this->name = $name;
+    }
     public function getCapital(){
         return $this->capital;
     }
