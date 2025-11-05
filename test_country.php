@@ -10,15 +10,19 @@ echo $Belgique->getInfo();
 echo "<br>".$France->getCapital();
 echo "<br>".$Algerie->getContinent();
 echo "<br>".$Belgique->getContinent();
+$Chine = new DeveloppedCountry("Chine","Pekin",1000000000,"europe",500);
 
 $France->setCapital("Toulouse");
 echo $France->getInfo();
 
 echo "mon tableau :";
-$countries = [$France,$Algerie,$Belgique];
+$countries = [$France,$Algerie,$Belgique,$Chine];
+$Suisse = new DeveloppedCountry("Suisse","Berne",133900,"europe",900);
+array_push($countries,$Suisse);
 foreach ($countries as $country) {
     echo $country->getInfo();
 }
 
-$Chine = new DeveloppedCountry("Chine","Pekin",1000000000,"europe",500);
+
 echo $Chine->getInfo();
+affichePaysTresPeuples($countries);

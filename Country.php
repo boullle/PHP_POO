@@ -35,7 +35,10 @@ Class Country {
         $this->capital = $capital;
     }
     public function setPopulation($population){
-        $this->population = $population;
+        if($population>0){
+            $this->population = $population;
+        }
+
     }
     public function setContinent($continent){
         $this->continent = $continent;
@@ -44,6 +47,11 @@ Class Country {
     public function getInfo()
     {
             return "<br>le pays ".$this->getName()." a pour capitale ".$this->getCapital()." et une population de ".$this->getPopulation()." et est sur le continent de ".$this->getContinent()."<br>";
+    }
+    public function isPopulous(){
+        if ($this->getPopulation() > 100000000){
+            return true;
+        }
     }
 }
 Class DeveloppedCountry extends Country{
@@ -65,4 +73,11 @@ Class DeveloppedCountry extends Country{
 
     }
 
+}
+function affichePaysTresPeuples(array $tabs){
+    foreach ($tabs as $tab){
+        if ($tab->isPopulous()){
+            echo "<br>".$tab->getInfo()."<br>";
+        }
+    }
 }
