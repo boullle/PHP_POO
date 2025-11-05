@@ -19,3 +19,6 @@ $countries = [$France,$Algerie,$Belgique];
 foreach ($countries as $country) {
     echo $country->getInfo();
 }
+
+$Chine = new DeveloppedCountry("Chine","Pekin",1000000000,"europe",500);
+echo $Chine->getInfo();
